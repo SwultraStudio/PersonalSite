@@ -24,6 +24,7 @@ const Post = () => {
                     let data = await response.json();
                     setPostInfo(data[0]);
                     setIsLoading(false);
+                    document.title = data[0].title;
                 }
                 setIsLoading(false);
 
