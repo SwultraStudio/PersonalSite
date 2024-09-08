@@ -46,7 +46,7 @@ const Post = () => {
                     <hr />
 
                     <img src={postInfo.imageurl} className='pt-5 w-full h-auto' alt="Post" />
-                    <div className='pt-8' dangerouslySetInnerHTML={{ __html: postInfo.text }} />
+                    <div className='pt-8 text-lg mb-5 select-text' dangerouslySetInnerHTML={{ __html: postInfo.text }} />
 
                     <hr />
                     {

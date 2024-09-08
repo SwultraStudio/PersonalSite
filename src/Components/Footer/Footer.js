@@ -97,16 +97,14 @@ const Footer = ()=>{
 <footer class="bg-slate-950">
     <div class="container px-6 py-12 mx-auto">
 
-        
-        <hr class="my-6 border-gray-200 md:my-8 "></hr>
-        
+              
         <div class="flex items-center justify-between">
             
             <div class="flex -mx-2">
                 {
                     SocialMedia.map((platform)=>(
                         <a href={platform.link} target='_blank' class="mx-2 text-gray-600 transition-colors duration-300  hover:text-blue-500 " aria-label="Reddit">
-                        <FontAwesomeIcon icon={platform.icon} title={platform.name} className="h-5 w-5 text-gray-600 hover:text-white transition duration-200" aria-hidden="true"/>
+                        <FontAwesomeIcon icon={platform.icon} title={platform.name} className="h-6 w-6 text-gray-600 hover:text-white transition duration-200" aria-hidden="true"/>
                         </a>
                     ))
                 }

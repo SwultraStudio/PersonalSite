@@ -16,7 +16,7 @@ export const Skills = () => {
                 <h1 class="text-xl font-semibold text-white capitalize">تطوير الويب</h1>
 
                 <p dir="rtl" class="text-white font-medium">
-                إجادة HTML ، CSS ، JavaScript و React لتطوير واجهات مستخدم تفاعلية وتجربة مستخدم ممتازة.
+                إجادة HTML، CSS، JavaScript، React و Next.js لتطوير واجهات مستخدم تفاعلية وتجربة مستخدم عالية الأداء مع تحسين SEO.
                 </p>
             </div>
 
@@ -84,17 +84,6 @@ export const Skills = () => {
 
 
 
-            {/* <div class="flex flex-col items-center p-6 space-y-3 text-center bg-slate-900 rounded-xl">
-                <span class="inline-block p-4 text-white bg-blue-600 rounded-xl">
-                <Icon iconSet={iconSet} icon="sssd" size={60} />
-                </span>
-
-                <h1 class="text-xl font-semibold text-white capitalize">صناعة المحتوى</h1>
-
-                <p dir="rtl" class="text-white">
-                إنشاء محتوى تعليمي ودورات تدريبية على YouTube لمساعدة الآخرين على التعلم والنمو في مجال تطوير البرمجيات.
-                </p>
-            </div> */}
         </div>
     </div>
 </section>

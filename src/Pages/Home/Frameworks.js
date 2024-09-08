@@ -3,9 +3,9 @@ import {
     faReact,
     faDocker,
     faGithub,
+    faDigitalOcean
 }from "@fortawesome/free-brands-svg-icons"
 
-//do not miss Chatgpt icon
 
 import Icon from "../../Icons/Icon";
 import iconSet from "../../Icons/Frameworks/selection.json";
@@ -20,6 +20,7 @@ const Frameworks = ()=>{
         { icon: faReact, name: 'React' },
         { icon: faDocker, name: 'Docker' },
         { icon: faGithub, name: 'GitHub' },
+        { icon: faDigitalOcean, name: 'Digital Ocean' },
 
     ]
 
@@ -27,7 +28,7 @@ const Frameworks = ()=>{
 
         <section class="bg-gray-100 rounded-md py-4 dark:bg-gray-900">
 
-        <h2 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">أطر العمل</h2>
+        <h2 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">أطر العمل والتقنيات</h2>
         <div class="container px-6 py-10 mx-auto">
             {
                 apps.map((data)=>(

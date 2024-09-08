@@ -26,7 +26,7 @@ const openLink = (targetUrl)=>{
         
             <div class="grid lg:grid-cols-3 lg:gap-x-12">
               <div class="mb-12 lg:mb-0">
-              <div onClick={()=>openLink("Youtube")} class="group cursor-pointer block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:bg-gradient-to-r from-rose-700 to-pink-600 transition duration-200">
+              <div onClick={()=>openLink("Youtube")} class="group cursor-pointer block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:bg-gradient-to-br from-rose-700 to-pink-600 transition duration-200">
                   <div class="flex justify-center">
 
                     <div class="-mt-8 inline-block rounded-full bg-primary-100 p-4 text-primary shadow-md group-hover:bg-gradient-to-r from-amber-200 to-yellow-400 transition duration-200">
@@ -43,7 +43,7 @@ const openLink = (targetUrl)=>{
               </div>
         
               <div class="mb-12 lg:mb-0">
-              <div onClick={()=>openLink("Courses")} class="group cursor-pointer block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  hover:bg-gradient-to-r from-slate-900 to-slate-700 transition duration-200">
+              <div onClick={()=>openLink("Courses")} class="group cursor-pointer block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  hover:bg-gradient-to-br from-slate-900 to-slate-700 transition duration-200">
                   <div class="flex justify-center">
 
                     <div class="-mt-8 inline-block rounded-full bg-primary-100 p-4 text-primary shadow-md group-hover:bg-gradient-to-r from-indigo-500 to-blue-500 transition duration-200">
@@ -63,10 +63,10 @@ const openLink = (targetUrl)=>{
         
               <div class="mb-12 lg:mb-0">
               <div
-                  class="group cursor-pointer block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  hover:bg-gradient-to-r from-violet-600 to-purple-600 transition duration-200">
+                  class="group cursor-pointer block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  hover:bg-gradient-to-br from-blue-600 to-violet-600 transition duration-200">
                   <div class="flex justify-center">
 
-                    <div class="-mt-8 inline-block rounded-full bg-primary-100 p-4 text-primary shadow-md group-hover:bg-gradient-to-r from-blue-400 to-emerald-400 transition duration-200">
+                    <div class="-mt-8 inline-block rounded-full bg-primary-100 p-4 text-primary shadow-md group-hover:bg-gradient-to-br from-orange-400 to-rose-400 transition duration-200">
                     <Icon iconSet={iconSet} icon="cv" className="h-10 w-10 text-black group-hover:text-white" aria-hidden="true"/>
                     </div>
                   </div>

@@ -6,7 +6,7 @@ import Icon from "../../Icons/Icon";
 import iconSet from "../../Icons/General/selection.json";
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faLaptopCode, faNewspaper, faComment, faRocket } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faLaptopCode, faNewspaper, faComment, faRocket, faChalkboard } from "@fortawesome/free-solid-svg-icons";
 
 // pages
 import Home from '../../Pages/Home/Home';
@@ -17,6 +17,7 @@ import Projects from '../../Pages/Home/Projects';
 import Courses from '../../Pages/Home/Courses';
 import Posts from '../../Pages/Posts/Posts';
 import Post from '../../Pages/Posts/Post';
+import { faMedapps } from '@fortawesome/free-brands-svg-icons';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -29,7 +30,7 @@ export default function Navbar() {
         <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <Link reloadDocument to="/" className="-m-1.5 p-1.5">
-              <p className='font-Quicksand text-3xl text-cyan-950'>Ahmad<span className='text-violet-500'>Mohamad</span></p>
+              <p className='font-Quicksand text-2xl text-cyan-950'>Ahmad<span className='text-violet-500'>Mohamad</span></p>
             </Link>
           </div>
           <div className="flex lg:hidden">
@@ -42,25 +43,26 @@ export default function Navbar() {
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <Popover.Group className="hidden lg:flex lg:gap-x-12">
-            <HashLink dir='rtl' to="/" smooth className="text-1x3 font-semibold leading-6 text-gray-900">
-              القائمة الرئيسية <FontAwesomeIcon icon={faHome} className="h-5 w-5 text-violet-500" aria-hidden="true" />
-            </HashLink>
-            <HashLink dir='rtl' to="/Posts" smooth className="text-1x3 font-semibold leading-6 text-gray-900">
+          <Popover.Group className="hidden lg:flex lg:gap-x-4">
+
+            <HashLink dir='rtl' to="/Posts" smooth className="text-lg py-2 px-3 rounded font-semibold leading-6 text-gray-900 transition duration-200 hover:bg-gray-100">
               مقالات <FontAwesomeIcon icon={faNewspaper} className="h-5 w-5 text-violet-500" aria-hidden="true" />
             </HashLink>
-            <HashLink dir='rtl' to="/Courses" smooth className="text-1x3 font-semibold leading-6 text-gray-900">
-              الكورسات <FontAwesomeIcon icon={faLaptopCode} className="h-5 w-5 text-violet-500" aria-hidden="true" />
+            <HashLink dir='rtl' to="/Courses" smooth className="text-lg py-2 px-3 rounded font-semibold leading-6 text-gray-900 transition duration-200 hover:bg-gray-100">
+              الكورسات <FontAwesomeIcon icon={faChalkboard} className="h-5 w-5 text-violet-500" aria-hidden="true" />
             </HashLink>
-            <Link dir="rtl" to="/Projects" smooth className="text-1x3 font-semibold leading-6 text-gray-900">
-              المشاريع <FontAwesomeIcon icon={faRocket} className="h-5 w-5 text-violet-500" aria-hidden="true" />
+            <Link dir="rtl" to="/Projects" smooth className="text-lg py-2 px-3 rounded font-semibold leading-6 text-gray-900 transition duration-200 hover:bg-gray-100">
+              المشاريع <FontAwesomeIcon icon={faMedapps} className="h-5 w-5 text-violet-500" aria-hidden="true" />
             </Link>
-            <Link dir="rtl" to="/Contact" smooth className="text-1x3 font-semibold leading-6 text-gray-900">
+            <Link dir="rtl" to="/Contact" smooth className="text-lg py-2 px-3 rounded font-semibold leading-6 text-gray-900 transition duration-200 hover:bg-gray-100">
               تواصل معي <FontAwesomeIcon icon={faComment} className="h-5 w-5 text-violet-500" aria-hidden="true" />
             </Link>
+            <HashLink dir='rtl' to="/" smooth className="text-lg py-2 px-3 rounded font-semibold leading-6 text-gray-900 transition duration-200 hover:bg-gray-100">
+              القائمة الرئيسية <FontAwesomeIcon icon={faHome} className="h-5 w-5 text-violet-500" aria-hidden="true" />
+            </HashLink>
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a dir="rtl" href="https://www.instagram.com/ahmadmsoftware/" target="_blank" className="focus:outline-none text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-base px-5 py-2.5 mb-2">
+            <a dir="rtl" href="https://www.instagram.com/ahmadmsoftware/" target="_blank" className="focus:outline-none text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-base px-3 py-2.5 mb-2">
               تواصل الآن <Icon iconSet={iconSet} icon="T4" size={35} aria-hidden="true" />
             </a>
           </div>
@@ -70,7 +72,7 @@ export default function Navbar() {
           <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <Link reloadDocument to="/" className="-m-1.5 p-1.5" onClick={closeMobileMenu}>
-                <p className='font-Quicksand text-3xl text-yellow-500'>Ahmad<span className='text-violet-500'>Mohamad</span></p>
+                <p className='font-Quicksand text-2xl text-cyan-950'>Ahmad<span className='text-violet-500'>Mohamad</span></p>
               </Link>
               <button
                 type="button"
@@ -83,31 +85,31 @@ export default function Navbar() {
             </div>
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
+                <div className="space-y-2 py-6" dir='rtl'>
                   <HashLink to="/" className="font-rubik -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" onClick={closeMobileMenu}>
-                    القائمة الرئيسية
+                    القائمة الرئيسية <FontAwesomeIcon icon={faHome} className="h-5 w-5 text-violet-500" aria-hidden="true" />
                   </HashLink>
                   <HashLink to="/Posts" className="font-rubik -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" onClick={closeMobileMenu}>
-                    مقالات
+                    مقالات <FontAwesomeIcon icon={faNewspaper} className="h-5 w-5 text-violet-500" aria-hidden="true" />
                   </HashLink>
                   <HashLink to="/Courses" className="font-rubik -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" onClick={closeMobileMenu}>
-                    الكورسات
+                    الكورسات <FontAwesomeIcon icon={faLaptopCode} className="h-5 w-5 text-violet-500" aria-hidden="true" />
                   </HashLink>
                   <Link to="/Projects" className="font-rubik -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" onClick={closeMobileMenu}>
-                    المشاريع
+                    المشاريع <FontAwesomeIcon icon={faMedapps} className="h-5 w-5 text-violet-500" aria-hidden="true" />
                   </Link>
                   <Link to="/Contact" className="font-rubik -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" onClick={closeMobileMenu}>
-                    تواصل معي
+                    تواصل معي <FontAwesomeIcon icon={faComment} className="h-5 w-5 text-violet-500" aria-hidden="true" />
                   </Link>
                 </div>
-                <div className="py-6">
+                <div className="py-6 flex justify-center items-center">
                   <a
                     href="https://www.instagram.com/ahmadmsoftware/"
                     target="_blank"
-                    className="font-rubik -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    className="bg-blue-600 font-rubik -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white"
                     onClick={closeMobileMenu}
                   >
-                    تواصل الآن
+                    <Icon iconSet={iconSet} icon="T4" size={35} aria-hidden="true" /> تواصل الآن 
                   </a>
                 </div>
               </div>
