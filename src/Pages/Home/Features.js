@@ -1,5 +1,6 @@
 import Icon from "../../Icons/Icon";
 import iconSet from "../../Icons/Skills/selection.json";
+import iconSet_2 from "../../Icons/New/selection.json";
 
 const Features = ()=>{
 
@@ -14,17 +15,20 @@ const openLink = (targetUrl)=>{
     case "CV":
       window.location.href = "";
       break;
+      case "Portfolio":
+        window.location.href = "Portfolio";
+      break; 
     default:
       break;
   }
 };
 
     return(
-        <div class="container mb-10 mx-auto md:px-6 pt-10" id="Features">
+        <div class=" mb-10 mx-3 md:px-6 pt-10" id="Features">
           <section class="mb-20 text-center">
-          <h2 class="text-2xl mb-20 font-semibold text-gray-800 capitalize lg:text-3xl ">المزيد</h2>
+          <h2 class="text-2xl mb-20 font-semibold text-gray-800 capitalize  ">المزيد</h2>
         
-            <div class="grid lg:grid-cols-3 lg:gap-x-12">
+            <div class="grid lg:grid-cols-4 lg:gap-x-12">
               <div class="mb-12 lg:mb-0">
               <div onClick={()=>openLink("Youtube")} class="group cursor-pointer block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:bg-gradient-to-br from-rose-700 to-pink-600 transition duration-200">
                   <div class="flex justify-center">
@@ -36,7 +40,7 @@ const openLink = (targetUrl)=>{
                   <div class="p-6">
                     <h5 class="mb-4 text-xl font-semibold group-hover:text-white transition duration-200">قناتي</h5>
                     <p dir="rtl" className="group-hover:text-white transition duration-200 text-lg">
-                    تعرف على أحدث الفيديوهات والموارد التعليمية من خلال قناتي على يوتيوب.
+                    تعرف على أحدث الفيديوهات التعليمية من خلال قناتي على يوتيوب.
                     </p>
                   </div>
                 </div>
@@ -54,6 +58,24 @@ const openLink = (targetUrl)=>{
                     <h5 class="mb-4 text-xl font-semibold group-hover:text-white transition duration-200">الكورسات</h5>
                     <p dir="rtl" className="group-hover:text-white transition duration-200 text-lg">
                     اكتشف الدورات التدريبية المتاحة لتحسين مهاراتك.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="mb-12 lg:mb-0">
+              <div onClick={()=>openLink("Portfolio")} class="group cursor-pointer block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]  hover:bg-gradient-to-r from-amber-500 to-pink-500 transition duration-200">
+                  <div class="flex justify-center">
+
+                    <div class="-mt-8 inline-block rounded-full bg-primary-100 p-4 text-primary shadow-md group-hover:bg-gradient-to-r from-fuchsia-600 to-pink-600 transition duration-200">
+                    <Icon iconSet={iconSet_2} icon="portfolio" className="h-10 w-10 text-black group-hover:text-white" aria-hidden="true"/>
+                    </div>
+                  </div>
+                  <div class="p-6">
+                    <h5 class="mb-4 text-xl font-semibold group-hover:text-white transition duration-200">نماذج أعمالي</h5>
+                    <p dir="rtl" className="group-hover:text-white transition duration-200 text-lg">
+                    مجموعة من أعمالي والمشاريع السابقة التي أنجزتها
                     </p>
                   </div>
                 </div>

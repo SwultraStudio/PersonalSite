@@ -6,7 +6,7 @@ import Icon from "../../Icons/Icon";
 import iconSet from "../../Icons/General/selection.json";
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faLaptopCode, faNewspaper, faComment, faRocket, faChalkboard } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faLaptopCode, faNewspaper, faComment, faRocket, faChalkboard, faBriefcase } from "@fortawesome/free-solid-svg-icons";
 
 // pages
 import Home from '../../Pages/Home/Home';
@@ -18,6 +18,8 @@ import Courses from '../../Pages/Home/Courses';
 import Posts from '../../Pages/Posts/Posts';
 import Post from '../../Pages/Posts/Post';
 import { faMedapps } from '@fortawesome/free-brands-svg-icons';
+import Portfolio from '../../Pages/Home/Portfolio';
+import PortfolioPage from '../../Pages/Home/PortfolioPage';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -45,11 +47,12 @@ export default function Navbar() {
           </div>
           <Popover.Group className="hidden lg:flex lg:gap-x-4">
 
-            <HashLink dir='rtl' to="/Posts" smooth className="text-lg py-2 px-3 rounded font-semibold leading-6 text-gray-900 transition duration-200 hover:bg-gray-100">
-              مقالات <FontAwesomeIcon icon={faNewspaper} className="h-5 w-5 text-violet-500" aria-hidden="true" />
-            </HashLink>
+
             <HashLink dir='rtl' to="/Courses" smooth className="text-lg py-2 px-3 rounded font-semibold leading-6 text-gray-900 transition duration-200 hover:bg-gray-100">
               الكورسات <FontAwesomeIcon icon={faChalkboard} className="h-5 w-5 text-violet-500" aria-hidden="true" />
+            </HashLink>
+            <HashLink dir='rtl' to="/Portfolio" smooth className="text-lg py-2 px-3 rounded font-semibold leading-6 text-gray-900 transition duration-200 hover:bg-gray-100">
+              نماذج من اعمالي <FontAwesomeIcon icon={faBriefcase} className="h-5 w-5 text-violet-500" aria-hidden="true" />
             </HashLink>
             <Link dir="rtl" to="/Projects" smooth className="text-lg py-2 px-3 rounded font-semibold leading-6 text-gray-900 transition duration-200 hover:bg-gray-100">
               المشاريع <FontAwesomeIcon icon={faMedapps} className="h-5 w-5 text-violet-500" aria-hidden="true" />
@@ -62,7 +65,7 @@ export default function Navbar() {
             </HashLink>
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a dir="rtl" href="https://www.instagram.com/ahmadmsoftware/" target="_blank" className="focus:outline-none text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-base px-3 py-2.5 mb-2">
+            <a dir="rtl" href="https://www.instagram.com/devops2x/" target="_blank" className="focus:outline-none text-white bg-gradient-to-r from-fuchsia-600 to-pink-600 hover:bg-gradient-to-br hover:shadow-md transition font-medium rounded-full text-base px-3 py-2.5 mb-2">
               تواصل الآن <Icon iconSet={iconSet} icon="T4" size={35} aria-hidden="true" />
             </a>
           </div>
@@ -89,8 +92,8 @@ export default function Navbar() {
                   <HashLink to="/" className="font-rubik -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" onClick={closeMobileMenu}>
                     القائمة الرئيسية <FontAwesomeIcon icon={faHome} className="h-5 w-5 text-violet-500" aria-hidden="true" />
                   </HashLink>
-                  <HashLink to="/Posts" className="font-rubik -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" onClick={closeMobileMenu}>
-                    مقالات <FontAwesomeIcon icon={faNewspaper} className="h-5 w-5 text-violet-500" aria-hidden="true" />
+                  <HashLink to="/Portfolio" className="font-rubik -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" onClick={closeMobileMenu}>
+                    نماذج من أعمالي <FontAwesomeIcon icon={faNewspaper} className="h-5 w-5 text-violet-500" aria-hidden="true" />
                   </HashLink>
                   <HashLink to="/Courses" className="font-rubik -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" onClick={closeMobileMenu}>
                     الكورسات <FontAwesomeIcon icon={faLaptopCode} className="h-5 w-5 text-violet-500" aria-hidden="true" />
@@ -104,7 +107,7 @@ export default function Navbar() {
                 </div>
                 <div className="py-6 flex justify-center items-center">
                   <a
-                    href="https://www.instagram.com/ahmadmsoftware/"
+                    href="https://www.instagram.com/devops2x/"
                     target="_blank"
                     className="bg-blue-600 font-rubik -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white"
                     onClick={closeMobileMenu}
@@ -124,8 +127,9 @@ export default function Navbar() {
         <Route path='*' element={<NotFound />}></Route>
         <Route element={<Projects />} path='/Projects'></Route>
         <Route element={<Courses />} path='/Courses'></Route>
-        <Route element={<Posts />} path='/Posts'></Route>
-        <Route element={<Post />} path='/Post'></Route>
+        <Route element={<Portfolio />} path='/Portfolio'></Route>
+        <Route path="/Portfolio/:id" element={<PortfolioPage />} />
+
       </Routes>
     </BrowserRouter>
   );

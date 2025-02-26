@@ -7,7 +7,7 @@ const apps = [
   { name: 'Iraq Library', image: "https://swultra-studio.web.app/Iraq%20Library.png",href:'https://swultra-studio.web.app/Iraq-Library/',action:'المزيد' },
   { name: 'Shiny Ghast', image: "https://swultra-studio.web.app/Shiny%20Ghast.png",href:'https://swultra-studio.web.app/Shiny-Ghast/',action:'المزيد'},
   { name: 'PDF Ximer', image: "https://swultra-studio.web.app/PDF%20Ximer.png",href:'https://swultra-studio.web.app/PDF-Ximer/' ,action:'المزيد'},
-  { name: 'تطبيق خريج', image: "/Images/Apps/Graduate.png",href:'https://play.google.com/store/apps/details?id=com.graduate.gr',action:'تنزيل'},
+  { name: 'تطبيق خريج', image: "/Images/Apps/Graduate.webp",href:'https://play.google.com/store/apps/details?id=com.graduate.gr',action:'تنزيل'},
 
 ];
 

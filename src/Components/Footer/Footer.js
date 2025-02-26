@@ -14,7 +14,7 @@ import {
 //social media
 const SocialMedia = [
     {name:'Facebook',icon:faFacebook,link:'https://www.facebook.com/AhmadMohamadSoftware'},
-    {name:'Instgram',icon:faInstagram,link:'https://www.instagram.com/ahmadmsoftware/'},
+    {name:'Instagram',icon:faInstagram,link:'https://www.instagram.com/devops2x/'},
     {name:'LinkedIn',icon:faLinkedin,link:'https://www.linkedin.com/in/ahmad-al-husseini/'},
     {name:'Twitter',icon:faTwitter,link:'https://twitter.com/AhmadMSoftware'},
     {name:'Whatsapp',icon:faWhatsapp,link:'https://wa.me/9647802327059'},   
@@ -97,20 +97,43 @@ const Footer = ()=>{
 <footer class="bg-slate-950">
     <div class="container px-6 py-12 mx-auto">
 
-              
-        <div class="flex items-center justify-between">
-            
+    <div className='flex justify-center items-center gap-4 mb-6'>
+    <a
+      href={SocialMedia.filter(s=> s.name === "Instagram")[0].link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 px-5 py-2 text-white bg-gradient-to-r from-fuchsia-600 to-pink-600 rounded-full shadow-lg hover:from-pink-600 hover:to-purple-700 transition duration-300"
+    >
+      <FontAwesomeIcon icon={faInstagram} className="w-5 h-5" />
+      <span className="font-semibold">لاتنسى متابعتي</span>
+    </a>
+
+    <a
+  href={SocialMedia.filter(s => s.name === "Telegram")[0].link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 px-5 py-2 text-white bg-gradient-to-r from-[#0088cc] to-[#229ED9] rounded-full shadow-lg hover:from-[#0078B8] hover:to-[#1A8ACB] transition duration-300"
+>
+  <FontAwesomeIcon icon={faTelegram} className="w-5 h-5" />
+  <span className="font-semibold">انضم لقناتي في تيليغرام</span>
+</a>
+
+
+    </div>
+        <div class="flex flex-col items-center justify-center">
+            <p className='text-white mb-5 text-lg' dir='rtl'> لا تتردد في التواصل معي 💬 </p>
             <div class="flex -mx-2">
                 {
                     SocialMedia.map((platform)=>(
                         <a href={platform.link} target='_blank' class="mx-2 text-gray-600 transition-colors duration-300  hover:text-blue-500 " aria-label="Reddit">
-                        <FontAwesomeIcon icon={platform.icon} title={platform.name} className="h-6 w-6 text-gray-600 hover:text-white transition duration-200" aria-hidden="true"/>
+                        <FontAwesomeIcon icon={platform.icon} title={platform.name} className="h-7 w-7 text-gray-600 hover:text-white transition duration-200" aria-hidden="true"/>
                         </a>
                     ))
                 }
             </div>
         </div>
     </div>
+
     <div className='flex justify-center pb-2'>
       <p className="text-white">&copy; 2024 Ahmad Mohamad. All rights reserved.</p>
     </div>

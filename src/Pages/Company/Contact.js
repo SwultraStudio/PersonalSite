@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {faPaperPlane,faSpinner} from "@fortawesome/free-solid-svg-icons"
-import {faWhatsapp,faTelegram,} from "@fortawesome/free-brands-svg-icons"
+import {faWhatsapp,faTelegram, faInstagram,} from "@fortawesome/free-brands-svg-icons"
 
 import { useState } from "react";
 import toast, { Toaster } from 'react-hot-toast';
@@ -173,7 +173,7 @@ const Contact = ()=>{
             <p class="font-medium text-2xl text-white">وسائل التواصل الاخرى</p>
         </div>
 
-        <div class="grid grid-cols-1 gap-12 mt-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div class="grid grid-cols-1 gap-12 mt-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             <div class="p-4 rounded-lg bg-blue-50 md:p-6">
                 <span class="inline-block p-3 text-blue-500 rounded-lg bg-blue-100/80 ">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
@@ -182,7 +182,7 @@ const Contact = ()=>{
                 </span>
 
                 <h2 class="mt-4 text-xl font-medium text-gray-800 ">الايميل</h2>
-                <p class="mt-2 text-base text-gray-500 ">اتصل بنا عبر الايميل الرسمي</p>
+                <p class="mt-2 text-base text-gray-500 ">تواصل معي عبر الايميل الرسمي</p>
                 <p class="select-text mt-2 text-base text-blue-500 ">Codersbookmark@gmail.com</p>
             </div>
 
@@ -192,8 +192,18 @@ const Contact = ()=>{
                 </span>
                 
                 <h2 class="mt-4 text-xl font-medium text-gray-800 ">Telegram</h2>
-                <p class="mt-2 text-base text-gray-500 ">اتصل بنا عبر تيليغرام</p>
-                <a href="https://t.me/AhmadMohamadDev" target="_blank"><p class="focus:outline-none mt-2 text-base text-blue-500  border-2 border-violet-600 cursor-pointer rounded-full transition duration-200 hover:text-white hover:bg-violet-600">انقر هنا</p></a>
+                <p class="mt-2 text-base text-gray-500 ">تواصل معي عبر تيليغرام</p>
+                <a href="https://t.me/AhmadMDev" target="_blank"><p class="focus:outline-none mt-2 text-base text-blue-500  border-2 border-violet-600 cursor-pointer rounded-full transition duration-200 hover:text-white hover:bg-violet-600">انقر هنا</p></a>
+            </div>
+
+            <div class="p-4 rounded-lg bg-blue-50 md:p-6 ">
+                <span class="inline-block p-3 pb-1 text-blue-500 rounded-lg bg-blue-100/80 ">
+                <FontAwesomeIcon icon={faInstagram} className="h-7 w-7 text-blue-500" aria-hidden="true"/>
+                </span>
+                
+                <h2 class="mt-4 text-xl font-medium text-gray-800 ">Instagram</h2>
+                <p class="mt-2 text-base text-gray-500 ">تواصل معي عبر الانستغرام</p>
+                <a href="https://www.instagram.com/devops2x" target="_blank"><p class="focus:outline-none mt-2 text-base text-blue-500  border-2 border-violet-600 cursor-pointer rounded-full transition duration-200 hover:text-white hover:bg-violet-600">انقر هنا</p></a>
             </div>
 
             <div class="p-4 rounded-lg bg-blue-50 md:p-6 ">
@@ -215,7 +225,7 @@ const Contact = ()=>{
                 </span>
                 
                 <h2 class="mt-4 text-xl font-medium text-gray-800 ">عبر الهاتف</h2>
-                <p class="mt-2 text-base text-gray-500 ">اتصل بنا للاستفسار حول خدماتنا</p>
+                <p class="mt-2 text-base text-gray-500 ">تواصل معي عبر رقم الهاتف</p>
                 <p class="select-text mt-2 text-base text-blue-700 ">+964 7802327059</p>
             </div>
         </div>
